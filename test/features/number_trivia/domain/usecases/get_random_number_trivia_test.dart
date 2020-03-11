@@ -23,14 +23,14 @@ void main() {
     'should get trivia from the repository',
     () async {
       // arrange
-      when(mockNumberTriviaRepository.getRandoNumberTrivia()).thenAnswer((_) async => Right(tNumberTrivia));
+      when(mockNumberTriviaRepository.getRandomNumberTrivia()).thenAnswer((_) async => Right(tNumberTrivia));
 
       // act
       final result = await usecase(NoParams());
 
       // assert
       expect(result, Right(tNumberTrivia));
-      verify(mockNumberTriviaRepository.getRandoNumberTrivia());
+      verify(mockNumberTriviaRepository.getRandomNumberTrivia());
       verifyNoMoreInteractions(mockNumberTriviaRepository);
     },
   );

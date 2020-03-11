@@ -29,9 +29,9 @@ class NumberTriviaRepositoryImpl implements NumberTriviaRepository {
   }
 
   @override
-  Future<Either<Failure, NumberTrivia>> getRandoNumberTrivia() async {
+  Future<Either<Failure, NumberTrivia>> getRandomNumberTrivia() async {
     return await _getTrivia(() {
-      return remoteDataSource.getRandoNumberTrivia();
+      return remoteDataSource.getRandomNumberTrivia();
     });
   }
 

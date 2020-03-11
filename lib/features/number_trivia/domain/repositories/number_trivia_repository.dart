@@ -5,5 +5,5 @@ import 'package:flutter_tdd/features/number_trivia/domain/entities/number_trivia
 abstract class NumberTriviaRepository {
   Future<Either<Failure, NumberTrivia>> getConcreteNumberTrivia(int number);
 
-  Future<Either<Failure, NumberTrivia>> getRandoNumberTrivia();
+  Future<Either<Failure, NumberTrivia>> getRandomNumberTrivia();
 }
